@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}Interview{% endblock %}
+
+{% block content %}
+<div class="interview-container">
+    <div class="prompt-section">
+        <p class="prompt">{{ interview_question }}</p>
+    </div>
+    <div class="response-section">
+        <form action="/interviewer" method="post">
+            <textarea class="response-textarea" name="user_response" required style="height: 200px; width: 1000px;"></textarea>
+            <button type="submit" class="btn btn-primary submit-button"><i class="fas fa-arrow-right"></i></button>
+            <input type="hidden" name="question_count" value="{{ question_count }}">
+            <input type="hidden" name="interview_question" value="{{ interview_question }}">
+        </form>
+    </div>
+</div>
+{% endblock %}

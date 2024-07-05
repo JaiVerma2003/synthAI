@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Interview Results{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Interview Results</h1>
+    <p>Here's the analysis of your interview performance:</p>
+    <p><b>Analysis:</b> {{ analysis }}</p>
+    <p><b>Score:</b> {{ score }}</p>
+    <p><b>Improvement Points:</b></p>
+    <ul>
+      {% for point in improvement_points %}
+        <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}
