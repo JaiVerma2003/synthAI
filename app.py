@@ -6,7 +6,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from werkzeug.datastructures import FileStorage
 from werkzeug.utils import secure_filename
 
-api_key = 'AIzaSyBKAMX4Lr7A74R2Cw56ZpW6-iEDCB1OeRM'
+api_key = 'YourAPIkey'
 # Configure Gemini with your API key
 genai.configure(api_key=api_key)
 
